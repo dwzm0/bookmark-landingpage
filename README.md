@@ -1,0 +1,1 @@
+Responsive landing using SCSS and BEM.
