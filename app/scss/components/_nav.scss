@@ -1,0 +1,32 @@
+@use '../base/_variables' as *;
+
+.nav {
+    display: flex;
+    align-items: center;
+ 
+
+    &__item {
+        margin-right: 50px;
+        color: $secondary-color-VDblue;
+        font-size: $font-sm;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: $primary-color-red;
+        }
+    }
+
+    .btn {      
+        height: 40px;
+        padding: 14px 30px;
+        font-size: $font-sm;
+        letter-spacing: 1px;
+        color: $secondary-white;
+        background-color: $primary-color-red;
+        border-radius: 6px;
+        text-transform: uppercase;
+        
+        box-shadow:  0px 8px 24px rgba($secondary-color-Gblue, 0.4);
+    }
+}

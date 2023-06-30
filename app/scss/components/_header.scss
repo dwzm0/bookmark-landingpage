@@ -1,0 +1,29 @@
+@use '../base/variables.scss' as *;
+
+.header {
+    padding-block: 40px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__right {
+        
+
+        &_mobile-menu-trigger {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .nav {
+            display: none;
+        }
+    }
+}
