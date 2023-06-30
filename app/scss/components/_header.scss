@@ -11,17 +11,18 @@
 
     &__right {
         
-
         &_mobile-menu-trigger {
             display: none;
+
+            @media (max-width: 667px) {
+                display: flex;
+            }
         }
 
-        @media (max-width: 767px) {
-            display: flex;
-        }
+      
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 667px) {
         .nav {
             display: none;
         }
