@@ -16,6 +16,9 @@ body {
 
 .flex {
   display: flex;
+  /*     &-jc-c {
+          justify-content: center;
+      } */
   /* 
       &-ai-c {
           align-items: center;
@@ -23,7 +26,4 @@ body {
 }
 .flex-jc-sb {
   justify-content: space-between;
-}
-.flex-jc-c {
-  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
