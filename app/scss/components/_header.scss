@@ -1,6 +1,7 @@
 @use '../base/variables.scss' as *;
 
 .header {
+    display: block;
     padding-block: 40px;
 
     .container {

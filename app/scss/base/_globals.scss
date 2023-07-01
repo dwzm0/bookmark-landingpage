@@ -25,6 +25,12 @@ body {
             display: flex;
         }
     }
+
+    &.closed {
+        .header {
+            display: none;
+        }
+    }
 }
 
 

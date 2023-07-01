@@ -4,13 +4,13 @@ const mobileMenuClose = document.getElementById('mobile-menu-close')
 if(mobileMenuTrigger) {
     mobileMenuTrigger.addEventListener('click', (e) => {
         e.preventDefault()
-        document.body.classList.add('opened', 'lock')
+        document.body.classList.add('opened', 'lock', 'closed')
     })
 }
  
 if(mobileMenuClose) {
     mobileMenuClose.addEventListener('click', (e) => {
         e.preventDefault()
-        document.body.classList.remove('opened', 'lock')
+        document.body.classList.remove('opened', 'lock', 'closed')
     })
 }
