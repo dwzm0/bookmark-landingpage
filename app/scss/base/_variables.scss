@@ -1,10 +1,15 @@
 $primary-color-blue: hsl(231, 69%, 60%);
 $primary-color-red: hsl(0, 94%, 66%);
-$secondary-color-Gblue: hsl(229, 8%, 60%);
+$secondary-color-Gblue: hsla(229, 8%, 60%);
 $secondary-color-VDblue: hsl(229, 31%, 21%);
 $secondary-white: hsl(0, 100%, 100%);
+$secondary-color-GblueTransp: hsla(229, 8%, 60%, 0.1);
+$secondary-color-VDblueTransp: hsla(229, 31%, 21%, 0.719);
+
 
 $font-sm: 0.75rem; //12px
-/* $font-sm: 0.875rem; //14px*/
-$font-med: 1.125rem; //18px
-$font-lg: 1.25rem; //20px
+$font-med: 0.875rem; //14px
+$font-main: 1rem; //16px
+$font-lg: 1.125rem; //18px
+$font-xl: 1.25rem; //20px
+$font-xxl: 2.25rem; //36px
