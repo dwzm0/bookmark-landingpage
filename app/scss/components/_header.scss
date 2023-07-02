@@ -15,7 +15,7 @@
         &_mobile-menu-trigger {
             display: none;
 
-            @media (max-width: 667px) {
+            @media (max-width: 1024px) {
                 display: flex;
             }
         }
@@ -23,7 +23,7 @@
       
     }
 
-    @media (max-width: 667px) {
+    @media (max-width: 1024px) {
         .nav {
             display: none;
         }
