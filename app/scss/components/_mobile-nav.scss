@@ -32,10 +32,12 @@
         color: $secondary-white;
         font-size: $font-lg;
         text-transform: uppercase;
+        justify-content: center;
         text-align: center;
         width: 100%;
         letter-spacing: 1px;
         border: 2px solid $secondary-white;
         border-radius: 6px;
+        
     }
 }

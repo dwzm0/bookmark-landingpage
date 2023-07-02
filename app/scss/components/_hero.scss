@@ -2,7 +2,6 @@
 
 .hero {
     margin-top: 60px; 
-    overflow-x: hidden;
 
     .container {
         display: flex;
@@ -54,26 +53,6 @@
             gap: 14px;
             padding-top: 5px;
 
-            & > .btn {
-                font-size: $font-med;
-                line-height: 1;
-                color: $secondary-white;
-                font-weight: 500;
-                padding: 16px 25px;
-                border-radius: 6px;
-                background-color: $primary-color-blue;
-                box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.1);
-
-                @media (max-width: 1024px) {
-                    padding: 15px 20px;
-                    white-space: nowrap;
-                }
-            }
-
-            :nth-child(2) {
-                color: $secondary-color-VDblueTransp;
-                background-color: $secondary-color-GblueTransp;
-            }
         }
     }
 
