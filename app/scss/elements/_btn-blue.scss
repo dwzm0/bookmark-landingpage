@@ -1,0 +1,14 @@
+@use '../base/variables.scss' as *;
+@import "./btn";
+
+.btn-blue {
+    @extend .btn;
+    font-size: $font-med;
+    line-height: 1;
+    color: $secondary-white;
+    font-weight: 500;
+    padding: 16px 25px;
+    border-radius: 6px;
+    background-color: $primary-color-blue;
+    box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.1);
+}

@@ -20,7 +20,7 @@ body {
     .main-text {
         color: $secondary-color-Gblue;
         line-height: 1.8;
-        
+
         @media (max-width: 1024px) {
             font-size: $font-main;
         }
@@ -46,4 +46,9 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+h2 {
+    font-size: $font-xxl;
+    font-weight: 500;
 }

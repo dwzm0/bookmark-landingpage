@@ -1,0 +1,22 @@
+@use '../base/variables.scss' as *;
+@import "./btn";
+
+.btn-red {
+    @extend .btn;
+    height: 40px;
+    padding: 13px 29px; 
+    font-size: $font-sm;
+    letter-spacing: 1px;
+    color: $secondary-white;
+    background-color: $primary-color-red;
+    border: 1px solid $primary-color-red;
+    border-radius: 6px;
+    text-transform: uppercase;
+    box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.1);
+
+    &:hover {
+        color: $primary-color-red;
+        background-color: $secondary-white;
+        border: 1px solid $primary-color-red;
+    }
+}

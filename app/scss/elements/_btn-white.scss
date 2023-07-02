@@ -1,0 +1,8 @@
+@use '../base/variables.scss' as *;
+@import './btn-blue';
+
+.btn-white {
+    @extend .btn-blue; 
+    color: $secondary-color-VDblueTransp;
+    background-color: $secondary-color-GblueTransp;
+}

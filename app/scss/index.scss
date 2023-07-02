@@ -8,6 +8,13 @@
 @use "components/mobile-menu";
 @use "components/mobile-nav";
 @use "components/hero";
+@use "components/features";
+
+//Elements
+@use "elements/btn";
+@use "elements/btn-red";
+@use "elements/btn-blue";
+@use "elements/btn-white";
 
 // Layouts
-@use "layouts/container"
+@use "layouts/container";

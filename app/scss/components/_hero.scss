@@ -35,7 +35,7 @@
             
         }
         h1 {
-            font-size: $font-xxxl;
+            font-size: $font-xxxxl;
             line-height: 1;
             color: $secondary-color-VDblue;
             font-weight: 500;
@@ -81,8 +81,7 @@
         display: flex;
         flex: 1;
         position: relative;
-        /* overflow-y: clip;
-        overflow-clip-margin: 240px; */
+      
         
         &-bg{
             flex: 1;
