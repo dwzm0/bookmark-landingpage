@@ -32,21 +32,38 @@
         padding-bottom: 70px;
 
         @media (max-width: 1024px) {
+            width: 100%;
             flex-direction: column;
             padding-top: 35px;
         }
     }
 
-    &__selection > p{
-        padding-inline: 50px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid $secondary-color-Gblue;
+    &__selection {
 
-        @media (max-width: 1024px) {
-            padding-block: 18px;
+        .border-wrapper {
+            padding-inline: 50px;
+            border-bottom: 1px solid $secondary-color-Gblue;
+            
 
-            &:nth-child(1) {
-                border-top: 1px solid $secondary-color-Gblue;
+            @media (max-width: 1024px) {
+                &:nth-child(1) {
+                    border-top: 1px solid $secondary-color-Gblue;
+                }
+            }
+        }
+
+        .border-wrapper p{
+            display: inline-block;
+            padding-bottom: 16px;
+
+            @media (max-width: 1024px) {
+                padding-top: 20px;
+            }
+            
+
+            &:hover {
+                color: hsl(0, 94%, 66%);
+                cursor: pointer;
             }
         }
     }

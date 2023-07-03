@@ -271,22 +271,32 @@ h2 {
 }
 @media (max-width: 1024px) {
   .features__selection {
+    width: 100%;
     flex-direction: column;
     padding-top: 35px;
   }
 }
-.features__selection > p {
+.features__selection .border-wrapper {
   padding-inline: 50px;
-  padding-bottom: 20px;
   border-bottom: 1px solid hsl(229, 8%, 60%);
 }
 @media (max-width: 1024px) {
-  .features__selection > p {
-    padding-block: 18px;
-  }
-  .features__selection > p:nth-child(1) {
+  .features__selection .border-wrapper:nth-child(1) {
     border-top: 1px solid hsl(229, 8%, 60%);
   }
+}
+.features__selection .border-wrapper p {
+  display: inline-block;
+  padding-bottom: 16px;
+}
+@media (max-width: 1024px) {
+  .features__selection .border-wrapper p {
+    padding-top: 20px;
+  }
+}
+.features__selection .border-wrapper p:hover {
+  color: hsl(0, 94%, 66%);
+  cursor: pointer;
 }
 .features__view-current {
   display: flex;

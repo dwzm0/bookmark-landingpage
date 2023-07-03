@@ -20,8 +20,48 @@ const img  = document.querySelector('.features__view-current .view img')
 const header = document.querySelector('.features__view-current .text h2')
 const text = document.querySelector('.features__view-current .text p')
 
+let width 
+
+const changeBorderOnResize = function() {
+    width = window.innerWidth
+    
+    for (let link of links) {
+        console.log(link.style.borderBottom);
+        if (window.innerWidth <= 1024 && link.style.borderBottom === '4px solid rgb(250, 87, 87)') {
+            link.style.borderBottom = '1px solid hsla(229, 8%, 60%)'
+            link.children[0].style.borderBottom = '4px solid hsl(0, 94%, 66%)'
+        }else if (window.innerWidth > 1024 && link.children[0].style.borderBottom === '4px solid rgb(250, 87, 87)'){
+            link.children[0].style.borderBottom = 'unset'
+            link.style.borderBottom = '4px solid hsl(0, 94%, 66%)'
+        }
+    }
+}
+
+window.addEventListener('resize', changeBorderOnResize);
+changeBorderOnResize()
+
+
+const setWrapperBorderRed = function(link){
+    link.style.borderBottom = '4px solid hsl(0, 94%, 66%)'
+}
+
+const setToDefault = function(link){
+    link.style.borderBottom = '1px solid hsla(229, 8%, 60%)'
+    link.children[0].style.borderBottom = 'unset'
+    link.children[0].style.paddingBottom = '16px'
+}
+
+const setParagraphBorderRed = function(link) {
+    link.children[0].style.borderBottom = '4px solid hsl(0, 94%, 66%)'
+    link.children[0].style.paddingBottom = '12px'
+}
+
 const changeView = function(link, viewSrc, viewHeader, viewText) {
     link.addEventListener('click', () => {
+        for (let link of links) {
+            setToDefault(link)
+        }
+        width <= 1024 ? setParagraphBorderRed(link) : setWrapperBorderRed(link)
         img.src = viewSrc
         header.textContent = viewHeader
         text.textContent = viewText
