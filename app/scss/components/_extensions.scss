@@ -1,0 +1,70 @@
+@use '../base/_variables' as *;
+
+.extensions {
+    padding-top: 160px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    &__text p{
+        max-width: 540px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+
+        
+    }
+
+    &__item {
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 6px;
+        padding: 26px;
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);;
+
+        &:nth-child(2) {
+            transform: translateY(40px);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(80px);
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-weight: 500;
+        }
+        p {
+           font-size: $font-med; 
+        }
+
+        /* .border {
+            padding-top: 10px;
+        } */
+
+        .btn-blue {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            line-height: 1.5;
+        }
+    }
+}
