@@ -1,0 +1,72 @@
+@use '../base/_variables' as *;
+
+.faq {
+    padding-top: 235px;
+
+    @media (max-width: 1024px) {
+        padding-top: 135px;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__text {
+        max-width: 520px;
+
+        p {
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__items {
+        width: 540px;
+        padding-bottom: 50px;
+    }
+
+    &__item {
+        padding-block: 25px;
+        border-top: 1px solid $secondary-color-Gblue;
+
+        &:nth-last-child(1) {
+            border-bottom: 1px solid $secondary-color-Gblue;
+        }
+
+        &:hover{
+            color: $primary-color-red;
+            cursor: pointer;
+        }
+
+        .question {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            h4  {
+                line-height: 1;
+                font-weight: 400;
+            }
+    
+            img {
+                margin-right: 20px;
+                width: 18px;
+                height: 12px;
+            }
+        }
+
+        .answer {
+            display: none;
+            padding-top: 30px;
+            text-align: left;
+
+            :hover {
+                cursor: default;
+            }
+        }
+    }
+}
