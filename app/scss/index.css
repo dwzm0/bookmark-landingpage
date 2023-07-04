@@ -21,7 +21,7 @@ body .main-text {
 }
 @media (max-width: 1024px) {
   body .main-text {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 body.lock {
@@ -418,10 +418,12 @@ h2 {
 
 .faq {
   padding-top: 235px;
+  padding-bottom: 150px;
 }
 @media (max-width: 1024px) {
   .faq {
     padding-top: 135px;
+    padding-bottom: 120px;
   }
 }
 .faq .container {
@@ -440,6 +442,13 @@ h2 {
 .faq__items {
   width: 540px;
   padding-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .faq__items {
+    width: unset;
+    min-width: 320px;
+    width: 100%;
+  }
 }
 .faq__item {
   padding-block: 25px;
@@ -462,10 +471,20 @@ h2 {
   line-height: 1;
   font-weight: 400;
 }
+@media (max-width: 1024px) {
+  .faq__item .question h4 {
+    font-size: 0.875rem;
+  }
+}
 .faq__item .question img {
   margin-right: 20px;
   width: 18px;
   height: 12px;
+}
+@media (max-width: 1024px) {
+  .faq__item .question img {
+    margin-right: 0px;
+  }
 }
 .faq__item .answer {
   display: none;
