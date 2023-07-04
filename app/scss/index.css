@@ -528,7 +528,11 @@ h2 {
   min-width: 450px;
   gap: 20px;
 }
-.cta__form input {
+.cta__form .input-container {
+  position: relative;
+  width: 100%;
+}
+.cta__form .input-container input {
   width: 100%;
   padding: 15px;
   border-radius: 6px;
@@ -536,17 +540,30 @@ h2 {
   color: hsl(229, 8%, 60%);
   font-weight: 500;
   border: 0px;
+  flex: 1;
 }
-.cta__form input:invalid {
+.cta__form .input-container input:invalid {
   border: 1px solid hsl(0, 94%, 66%);
 }
-.cta__form .icon-error {
+.cta__form .input-container .icon-error {
   display: none;
+  position: absolute;
+  left: 260px;
+  bottom: 10px;
 }
 .cta__form .input-error {
   display: none;
-  width: 100px;
-  background-color: red;
+  position: absolute;
+  width: 100%;
+  background-color: hsl(0, 94%, 66%);
+  color: hsl(0, 100%, 100%);
+  font-size: 0.75rem;
+  text-align: left;
+  white-space: nowrap;
+  padding: 5px;
+  font-style: italic;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .cta__form .btn-red {
   white-space: nowrap;

@@ -90,9 +90,12 @@ faqItems.forEach((item) => {
 const form = document.querySelector('.cta__form')
 
 const emailValidation = function(input) {
-    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (!input.value.match(mailformat)){
-        alert("NOT VALID email address!");
+    let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const errorIcon = document.querySelector('.icon-error')
+    const errorLabel = document.querySelector('.input-error')
+    if (!input.value.match(mailFormat)){
+        errorIcon.style.display = 'flex'
+        errorLabel.style.display = 'flex'
     }
 }
 

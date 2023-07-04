@@ -39,28 +39,49 @@
         gap: 20px;
         
         
-        input {
+        .input-container {
+            position: relative;
             width: 100%;
-            padding: 15px;
-            border-radius: 6px;
-            font-size: $font-med;
-            color: $secondary-color-Gblue;
-            font-weight: 500;
-            border: 0px;
 
-            &:invalid {
-                border: 1px solid $primary-color-red;
+            input {
+                width: 100%;
+                padding: 15px;
+                border-radius: 6px;
+                font-size: $font-med;
+                color: $secondary-color-Gblue;
+                font-weight: 500;
+                border: 0px;
+                flex: 1;
+    
+                &:invalid {
+                    border: 1px solid $primary-color-red;
+                }
+            }
+    
+            .icon-error {
+                display: none;
+                position: absolute;
+                left: 260px;
+                bottom: 10px
             }
         }
 
-        .icon-error {
-            display: none;
-        }
+       
 
         .input-error {
             display: none;
-            width: 100px;
-            background-color: red;
+            position: absolute;
+            width: 100%;
+            background-color: $primary-color-red;
+            color: $secondary-white;
+            font-size: $font-sm;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            font-style: italic;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            
         }
 
         .btn-red {
