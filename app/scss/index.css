@@ -495,6 +495,69 @@ h2 {
   cursor: default;
 }
 
+.cta {
+  background-color: hsl(231, 69%, 60%);
+  padding-block: 70px;
+}
+.cta .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cta__text {
+  width: 410px;
+}
+.cta__text p {
+  color: hsl(0, 100%, 100%);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 6px;
+  padding-bottom: 40px;
+}
+.cta__text h2 {
+  color: hsl(0, 100%, 100%);
+  padding-bottom: 40px;
+}
+.cta__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 450px;
+  gap: 20px;
+}
+.cta__form input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: hsl(229, 8%, 60%);
+  font-weight: 500;
+  border: 0px;
+}
+.cta__form input:invalid {
+  border: 1px solid hsl(0, 94%, 66%);
+}
+.cta__form .icon-error {
+  display: none;
+}
+.cta__form .input-error {
+  display: none;
+  width: 100px;
+  background-color: red;
+}
+.cta__form .btn-red {
+  white-space: nowrap;
+  height: 50px;
+  text-transform: none;
+  line-height: 1;
+}
+.cta__form .btn-red:hover {
+  cursor: pointer;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

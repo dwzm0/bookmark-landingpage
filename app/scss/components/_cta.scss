@@ -1,0 +1,77 @@
+@use '../base/_variables' as *;
+
+.cta {
+    background-color: $primary-color-blue;
+    padding-block: 70px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__text {
+        width: 410px;
+
+        p {
+          color: $secondary-white;
+          font-size: $font-sm;
+          text-transform: uppercase;
+          font-weight: 500;
+          letter-spacing: 6px;
+          padding-bottom: 40px;
+        }
+
+        h2 {
+          color: $secondary-white;   
+          padding-bottom: 40px;         
+        }
+
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        min-width: 450px;
+        gap: 20px;
+        
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: $font-med;
+            color: $secondary-color-Gblue;
+            font-weight: 500;
+            border: 0px;
+
+            &:invalid {
+                border: 1px solid $primary-color-red;
+            }
+        }
+
+        .icon-error {
+            display: none;
+        }
+
+        .input-error {
+            display: none;
+            width: 100px;
+            background-color: red;
+        }
+
+        .btn-red {
+            white-space: nowrap;
+            height: 50px;
+            text-transform: none;
+            line-height: 1;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

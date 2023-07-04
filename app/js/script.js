@@ -74,9 +74,6 @@ changeView(links[2], '../../images/illustration-features-tab-3.svg', 'Share your
 
 
 const faqItems = document.querySelectorAll('.faq__item')
-
-console.log(faqItems);
-
 faqItems.forEach((item) => {
     item.addEventListener('click', () => {
        if (item.children[1].style.display == '') {
@@ -88,4 +85,19 @@ faqItems.forEach((item) => {
        }
       
     })
+})
+
+const form = document.querySelector('.cta__form')
+
+const emailValidation = function(input) {
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!input.value.match(mailformat)){
+        alert("NOT VALID email address!");
+    }
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const input = document.getElementById('email')
+    emailValidation(input)
 })
