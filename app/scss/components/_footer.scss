@@ -1,0 +1,65 @@
+@use '../base/_variables' as *;
+
+.footer {
+    height: 85px;
+    background-color: $secondary-color-VDblue;
+    
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 30px;
+        padding-inline: 160px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+
+        .logo {
+            padding-right: 60px;
+        }
+
+        .links > .link{
+            margin-right: 40px;
+            color: $secondary-white;
+            font-size: $font-sm;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            text-decoration: none;
+    
+            &:hover {
+                color: $primary-color-red;
+            }
+        }
+                    
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    &__right *{
+        cursor: pointer;
+    }
+
+    .attribution {
+        background-color: $secondary-color-VDblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: $secondary-white;
+
+        a {
+            color: $primary-color-red;
+            padding-left: 7px;
+        }
+    }
+
+}

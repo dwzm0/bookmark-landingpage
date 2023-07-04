@@ -34,6 +34,9 @@ body .arrow-transform {
   transform: rotate(180deg);
   filter: invert(65%) sepia(95%) saturate(3458%) hue-rotate(324deg) brightness(99%) contrast(105%);
 }
+body .white-fill {
+  filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(155deg) brightness(100%) contrast(105%);
+}
 
 a, a:visited, a:hover {
   text-decoration: none;
@@ -115,9 +118,6 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 40px;
-}
-.mobile-menu .white-fill {
-  filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(155deg) brightness(100%) contrast(105%);
 }
 .mobile-menu__header {
   width: 100%;
@@ -508,6 +508,11 @@ h2 {
 .cta__text {
   width: 410px;
 }
+@media (max-width: 1024px) {
+  .cta__text {
+    width: unset;
+  }
+}
 .cta__text p {
   color: hsl(0, 100%, 100%);
   font-size: 0.75rem;
@@ -516,9 +521,20 @@ h2 {
   letter-spacing: 6px;
   padding-bottom: 40px;
 }
+@media (max-width: 1024px) {
+  .cta__text p {
+    padding-bottom: 10px;
+  }
+}
 .cta__text h2 {
   color: hsl(0, 100%, 100%);
   padding-bottom: 40px;
+}
+@media (max-width: 1024px) {
+  .cta__text h2 {
+    font-size: 1.75rem;
+    padding-bottom: 20px;
+  }
 }
 .cta__form {
   display: flex;
@@ -527,6 +543,13 @@ h2 {
   justify-content: center;
   min-width: 450px;
   gap: 20px;
+}
+@media (max-width: 1024px) {
+  .cta__form {
+    flex-direction: column;
+    min-width: unset;
+    width: 100%;
+  }
 }
 .cta__form .input-container {
   position: relative;
@@ -539,11 +562,8 @@ h2 {
   font-size: 0.875rem;
   color: hsl(229, 8%, 60%);
   font-weight: 500;
-  border: 0px;
+  border: none;
   flex: 1;
-}
-.cta__form .input-container input:invalid {
-  border: 1px solid hsl(0, 94%, 66%);
 }
 .cta__form .input-container .icon-error {
   display: none;
@@ -573,6 +593,65 @@ h2 {
 }
 .cta__form .btn-red:hover {
   cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .cta__form .btn-red {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer {
+  height: 85px;
+  background-color: hsl(229, 31%, 21%);
+}
+.footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 30px;
+  padding-inline: 160px;
+}
+.footer__left {
+  display: flex;
+  flex-direction: row;
+}
+.footer__left .logo {
+  padding-right: 60px;
+}
+.footer__left .links > .link {
+  margin-right: 40px;
+  color: hsl(0, 100%, 100%);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+}
+.footer__left .links > .link:hover {
+  color: hsl(0, 94%, 66%);
+}
+.footer__right {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.footer__right * {
+  cursor: pointer;
+}
+.footer .attribution {
+  background-color: hsl(229, 31%, 21%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: hsl(0, 100%, 100%);
+}
+.footer .attribution a {
+  color: hsl(0, 94%, 66%);
+  padding-left: 7px;
 }
 
 .btn {

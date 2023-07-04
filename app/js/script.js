@@ -88,19 +88,53 @@ faqItems.forEach((item) => {
 })
 
 const form = document.querySelector('.cta__form')
+const input = document.getElementById('email')
+const inputContainer = document.querySelector('.input-container')
+const errorIcon = document.querySelector('.icon-error')
+const errorLabel = document.querySelector('.input-error')
+
+
+const changeInputPadding = function() {
+    inputContainer.style.paddingBottom = '0px'
+    width <= 1024 ? inputContainer.style.paddingBottom = '20px' : inputContainer.style.paddingBottom = '0px'
+}
+
+const changeInputPaddingOnFullScreen = function() {
+    if (width) {
+      inputContainer.style.paddingBottom = '0px'
+      errorIcon.style.bottom = '10px'
+    }
+}
+
+window.addEventListener('resize', changeInputPadding);
+window.addEventListener('resize', changeInputPaddingOnFullScreen);
+
+changeInputPaddingOnFullScreen()
+
 
 const emailValidation = function(input) {
     let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    const errorIcon = document.querySelector('.icon-error')
-    const errorLabel = document.querySelector('.input-error')
     if (!input.value.match(mailFormat)){
+        changeInputPadding()
         errorIcon.style.display = 'flex'
         errorLabel.style.display = 'flex'
+        errorIcon.style.bottom = '30px'
+        input.style.border = '1px solid hsl(0, 94%, 66%)'
+
+    }else if (input.value.match(mailFormat)){
+        inputContainer.style.paddingBottom = '0px'
+        errorIcon.style.display = 'none'
+        errorLabel.style.display = 'none'
+        input.style.border = 'none'
+        alert(`${input.value} is correct email, you may proceed.`)
+        input.value = ""
     }
 }
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
-    const input = document.getElementById('email')
     emailValidation(input)
 })
+
+
+

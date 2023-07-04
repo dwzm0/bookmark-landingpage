@@ -14,6 +14,10 @@
     &__text {
         width: 410px;
 
+        @media (max-width: 1024px) {
+            width: unset;
+          }
+
         p {
           color: $secondary-white;
           font-size: $font-sm;
@@ -21,13 +25,21 @@
           font-weight: 500;
           letter-spacing: 6px;
           padding-bottom: 40px;
+
+          @media (max-width: 1024px) {
+            padding-bottom: 10px;
+        }
         }
 
         h2 {
           color: $secondary-white;   
           padding-bottom: 40px;         
+          
+          @media (max-width: 1024px) {
+            font-size: $font-xxl;
+            padding-bottom: 20px;    
+          }
         }
-
     }
 
     &__form {
@@ -37,7 +49,12 @@
         justify-content: center;
         min-width: 450px;
         gap: 20px;
-        
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            min-width: unset;
+            width: 100%;
+        }
         
         .input-container {
             position: relative;
@@ -50,12 +67,9 @@
                 font-size: $font-med;
                 color: $secondary-color-Gblue;
                 font-weight: 500;
-                border: 0px;
+                border: none;
                 flex: 1;
     
-                &:invalid {
-                    border: 1px solid $primary-color-red;
-                }
             }
     
             .icon-error {
@@ -65,8 +79,6 @@
                 bottom: 10px
             }
         }
-
-       
 
         .input-error {
             display: none;
@@ -92,6 +104,12 @@
 
             &:hover {
                 cursor: pointer;
+            }
+
+            @media (max-width: 1024px) {
+                display: block;
+                width: 100%;
+                text-align: center;
             }
         }
     }
