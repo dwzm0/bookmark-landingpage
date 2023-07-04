@@ -3,7 +3,10 @@
 .footer {
     height: 85px;
     background-color: $secondary-color-VDblue;
-    
+
+    @media (max-width: 1024px) {
+        height: 330px;
+    }
     
     .container {
         display: flex;
@@ -12,14 +15,37 @@
         align-items: center;
         padding-block: 30px;
         padding-inline: 160px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            padding-inline: 0px;
+        }
     }
 
     &__left {
         display: flex;
         flex-direction: row;
 
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
         .logo {
             padding-right: 60px;
+
+            @media (max-width: 1024px) {
+                padding-right: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .links {
+            @media (max-width: 1024px) {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         .links > .link{
@@ -34,14 +60,21 @@
             &:hover {
                 color: $primary-color-red;
             }
-        }
-                    
+
+            @media (max-width: 1024px) {
+                margin-top: 30px;
+                margin-right: 0px;
+            }
+        } 
     }
 
     &__right {
         display: flex;
         flex-direction: row;
         gap: 40px;
+        @media (max-width: 1024px) {
+            margin-top: 40px;
+        }
     }
 
     &__right *{
@@ -55,6 +88,10 @@
         justify-content: center;
         padding: 20px;
         color: $secondary-white;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
 
         a {
             color: $primary-color-red;
