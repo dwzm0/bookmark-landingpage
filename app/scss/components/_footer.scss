@@ -89,14 +89,26 @@
         padding: 20px;
         color: $secondary-white;
 
-        @media (max-width: 600px) {
-            flex-direction: column;
+        :nth-child(2) {
+            margin-left: 10px;
         }
 
         a {
             color: $primary-color-red;
             padding-left: 7px;
         }
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+
+            :nth-child(2) {
+                margin-left: 0px;
+            }
+        }
+
+      
+
+       
     }
 
 }

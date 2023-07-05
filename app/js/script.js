@@ -1,5 +1,6 @@
 const mobileMenuTrigger = document.getElementById('mobile-menu-trigger')
 const mobileMenuClose = document.getElementById('mobile-menu-close')
+const mobileMenuLinks = document.querySelectorAll('.mobile-nav__item')
 
 if(mobileMenuTrigger) {
     mobileMenuTrigger.addEventListener('click', (e) => {
@@ -14,6 +15,12 @@ if(mobileMenuClose) {
         document.body.classList.remove('opened', 'lock')
     })
 }
+
+mobileMenuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        document.body.classList.remove('opened', 'lock')
+    })
+})
 
 const links = document.querySelector('.features__selection').children
 const img  = document.querySelector('.features__view-current .view img')
@@ -100,9 +107,8 @@ const changeInputPadding = function() {
 }
 
 const changeInputPaddingOnFullScreen = function() {
-    if (width) {
+      if (width > 1024) {
       inputContainer.style.paddingBottom = '0px'
-      errorIcon.style.bottom = '10px'
     }
 }
 
@@ -111,23 +117,33 @@ window.addEventListener('resize', changeInputPaddingOnFullScreen);
 
 changeInputPaddingOnFullScreen()
 
+const onInValid = function() {
+    changeInputPadding()
+    errorIcon.style.display = 'flex'
+    errorLabel.style.display = 'flex'
+    input.style.border = '1px solid hsl(0, 94%, 66%)'
+}
+
+const onValid = function() {
+    inputContainer.style.paddingBottom = '0px'
+    errorIcon.style.display = 'none'
+    errorLabel.style.display = 'none'
+    input.style.border = 'none'
+    alert(`${input.value} is correct email, you may proceed.`)
+    input.value = ""
+}
+
 
 const emailValidation = function(input) {
     let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (!input.value.match(mailFormat)){
-        changeInputPadding()
-        errorIcon.style.display = 'flex'
-        errorLabel.style.display = 'flex'
-        errorIcon.style.bottom = '30px'
-        input.style.border = '1px solid hsl(0, 94%, 66%)'
-
+        if (width <= 1024) {
+            onInValid()
+        } else if (width > 1024) {
+            onInValid()
+        }
     }else if (input.value.match(mailFormat)){
-        inputContainer.style.paddingBottom = '0px'
-        errorIcon.style.display = 'none'
-        errorLabel.style.display = 'none'
-        input.style.border = 'none'
-        alert(`${input.value} is correct email, you may proceed.`)
-        input.value = ""
+        onValid()
     }
 }
 
